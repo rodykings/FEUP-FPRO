@@ -24,6 +24,12 @@
     <Compile Include="aDigits.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="getPositions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mastermind.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="perfect.py">
       <SubType>Code</SubType>
     </Compile>
