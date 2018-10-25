@@ -1,70 +1,60 @@
-def adigits(num_1, num_2, num_3):
+def adigits(n1, n2, n3):
     
-    n1 = int(num_1)
-    n2 = int(num_2)
-    n3 = int(num_3)
+    n1_int = int(n1)
+    n2_int = int(n2)
+    n3_int = int(n3)
     final_str = ""
     
     #equal numbers
-    if n1 == n2 and n2 == n3:
-        return num_1 + num_2 + num_3
+    if n1_int == n2_int and n2_int == n3_int:
+        return  int(n1 + n2 + n3)
     
     #two iquals
-    if n1 == n2:
-        if n1 > n3:
-            return num_1 + num_2 + num_3
+    if n1_int == n2_int:
+        if n1_int > n3_int:
+            return int(n1 + n2 + n3)
         else:
-            return num_3 + num_2 + num_1
-    if n1 == n3:
-        if n1 > n2:
-            return num_1 + num_3 + num_2
+            return int(n3 + n2 + n1)
+    if n1_int == n3_int:
+        if n1_int > n2_int:
+            return int(n1 + n2 + n3)
         else:
-            return num_2 + num_3 + num_1
-    if n2 == n3:
-        if n2 > n1:
-            return num_2 + num_3 + num_1
+            return int(n2 + n3 + n1)
+    if n2_int == n3_int:
+        if n2_int > n1_int:
+            return int(n2 + n3 + n1)
         else:
-            return num_1 + num_2 + num_3
+            return int(n1 + n2 + n3)
 
 
     #n1 is the max number
-    if n1 > n2 and n1 > n3:
-        final_str += num_1
-        if n2 > n3:
-            final_str += num_2 + num_3
-            return final_str
-        elif n3 > n2:
-            final_str += num_3 + num_2
-            return final_str
+    if n1_int > n2_int and n1_int > n3_int:
+        if n2_int > n3_int:
+            return int(n1 + n2 + n3)
+        elif n3_int > n2_int:
+            return int(n1 + n3 + n2)
         else:
-            final_str += num_2 + num_3
-            return final_str
+            return int(n1 + n2 + n3)
 
     #n2 is the max number
-    if n2 > n1 and n2 > n3:
-        final_str += num_2
-        if n1 > n3:
-            final_str += num_1 + num_3
-            return final_str
-        elif n3 > n1:
-            final_str += num_3 + num_1
-            return final_str
+    if n2_int > n1_int and n2_int > n3_int:
+        if n1_int > n3_int:
+            return int(n2 + n1 + n3)
+        elif n3_int > n1_int:
+            return (n2 + n3 + n1)
         else:
-            final_str += num_1 + num_3
-            return final_str
+            return (n2 + n1 + n3)
 
     #n3 is the max number
-    if n3 > n1 and n3 > n2:
-        final_str += num_3
-        if n1 > n2:
-            final_str += num_1 + num_2
-            return final_str
-        elif n2 > n1:
-            final_str += num_2 + num_1
-            return final_str
+    if n3_int > n1_int and n3_int > n2_int:
+        if n1_int > n2_int:
+           return int(n3 + n1 + n2)
+        elif n2_int > n1_int:
+           return int(n3 + n2 + n1)
         else:
-            final_str += num_1 + num_2
-            return final_str
+           return int(n3 + n1 + n2)
 
 print(adigits("4", "2", "5"))
 print(adigits("9", "1", "9"))
+print(adigits("2", "2", "1"))
+print(adigits("1", "2", "2"))
