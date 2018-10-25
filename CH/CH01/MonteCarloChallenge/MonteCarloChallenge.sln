@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MonteCarloGraphicInterface", "MonteCarloGraphicInterface.pyproj", "{9D5133E7-4508-4676-A7DD-778C14562191}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MonteCarloChallenge", "MonteCarloChallenge.pyproj", "{95BD17A1-E116-49D6-A5F5-5DDB28031D9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +11,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9D5133E7-4508-4676-A7DD-778C14562191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D5133E7-4508-4676-A7DD-778C14562191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95BD17A1-E116-49D6-A5F5-5DDB28031D9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95BD17A1-E116-49D6-A5F5-5DDB28031D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0F3BF762-8713-43B4-85DD-9FACA4C8A1EC}
+		SolutionGuid = {48C4ABD4-802F-447B-BE1A-D3C2783F65EA}
 	EndGlobalSection
 EndGlobal
