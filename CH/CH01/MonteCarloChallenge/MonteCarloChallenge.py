@@ -30,7 +30,7 @@ def monte_carlo(needles_square):
     return (square_area * needles_in(needles_square)) / needles_square
 
 def main():
-    print(monte_carlo(1000))
+    print(monte_carlo(2000))
 
 if __name__ == "__main__":
     main()
