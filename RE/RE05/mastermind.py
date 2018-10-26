@@ -4,9 +4,9 @@ def mastermind(g1, g2, g3, c1, c2, c3):
     if g1 == c1:
         points += 3
     elif g1 == c2:
-        points +=1
+        points += 1
     elif g1 == c3:
-        points +=1
+        points += 1
 
     if g2 == c2:
         points += 3

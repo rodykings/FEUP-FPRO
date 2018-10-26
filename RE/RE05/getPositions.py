@@ -1,12 +1,17 @@
 def get_positions(word_list, sentence):
     
-    final_str = "";
-    for i in range(0, 2, 1):
-        for n in range(0, 3, 1):
-           if sentence.split(" ")[i] == word_list[n]:
-                  final_str += str(n) + " "
-          
-    return final_str.split(" ")[0] + " " + final_str.split(" ")[1]
+    if sentence == (word_list[0] + " " + word_list[1]) :
+        return  "0 1"
+    elif sentence == (word_list[0] + " " + word_list[2]):
+        return  "0 2"
+    elif sentence == (word_list[1] + " " + word_list[0]):
+        return "1 0"
+    elif sentence == (word_list[1] + " " + word_list[2]):
+        return "1 2"
+    elif sentence == (word_list[2] + " " + word_list[0]):
+        return "2 0"  
+    elif sentence == (word_list[2] + " " + word_list[1]):
+        return "2 1"  
 
 print(get_positions(["hello", "world", "lousy"], "lousy world"))
 print(get_positions(["hello", "lousy", "world"], "lousy world"))
