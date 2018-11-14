@@ -8,4 +8,6 @@ def palindrome(astring):
             else:
                 if  string == string[::-1]:
                     counter += 1
-    return "For string '" + astring + "': " + str(counter) + " palindrome substrings"
+    return ("For string '{}': {} palindrome substrings").format(astring, str(counter))
+
+print(palindrome("banana"))
