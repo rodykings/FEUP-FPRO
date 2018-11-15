@@ -6,4 +6,4 @@ def triplet(atuple):
                 if atuple[i] + atuple[t] + atuple[u] == 0:
                     return (atuple[i], atuple[t], atuple[u])
     return ()
-print(triplet((-8, 0, 4, -2, -1, 1, 2)))
+

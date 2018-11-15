@@ -10,5 +10,3 @@ def translate(astring, table):
                
     return astring       
 
-print(translate("Hello World", (('a', 1), ('e', 2), ('i', 3),('o', 4), ('u', 5), ('!', ':'))))
-print(translate("Testing this string...", ((' ', '--'), ('.','!'), ('i', 'o'), ('t', 'tt'))))

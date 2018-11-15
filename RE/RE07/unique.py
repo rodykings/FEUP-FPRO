@@ -1,3 +1,4 @@
+
 def unique(atuple):
     
    final_tuple = ()
@@ -8,5 +9,4 @@ def unique(atuple):
 
    return tuple(sorted(final_tuple))
 
-print(unique((8, 8, 1, 3, 1, 3, 5))) 
-print(unique((1, 1 , 1 , 1)))
+
