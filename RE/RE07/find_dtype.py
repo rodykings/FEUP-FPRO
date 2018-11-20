@@ -6,5 +6,3 @@ def find_dtype(atuple, data_type):
             final_tuple += (i,)
     
     return final_tuple
-
-
