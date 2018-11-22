@@ -3,24 +3,34 @@
 # 1 2|
 # 3 4|
 
-def matrix(M, N):
 
-    R = []
+R = []
+
+#create result matrix
+def matrix_result(lines, collumns):
+    line = []
+    for i in range(collumns):
+        for t in range(lines):
+            line.append(0)
+        R.append(line)
+        line = []        
+            
+def matrix(M, N):
     
-    for i in 
+    matrix_result(len(M), len(N[0]))
     
-    if len(M[0]) == len(N[0]):
+    if len(M) == len(N[0]):
         #ITERATE M ROWS
         for r_M in range(len(M)):
             #ITERATE N COLLUMNS
             for c_N in range(len(N[0])):
                 #ITERATE N ROWS:
-                for r_N in range(len(N)):
+                for r_N in  range(len(N)):
                     R[r_M][c_N] += M[r_M][c_N] * N[r_N][c_N]
-        for r in R:
-            print(r)
+                    
+        return R   
       
     else:
         return[]
 
-matrix([[1, 2], [3, 4]], [[2, 0], [1, 2]])
+print(matrix([[1, 2], [3, 4]], [[2, 0], [1, 2]]))
