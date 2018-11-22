@@ -25,8 +25,8 @@ def matrix(M, N):
             #ITERATE N COLLUMNS
             for c_N in range(len(N[0])):
                 #ITERATE N ROWS:
-                for r_N in  range(len(N)):
-                    R[r_M][c_N] += M[r_M][c_N] * N[r_N][c_N]
+                for r_N in  range(len(M[0])):
+                    R[r_M][c_N] += M[r_M][r_N] * N[r_N][c_N]
                     
         return R   
       
