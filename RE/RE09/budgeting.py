@@ -23,51 +23,15 @@ def budgeting(budget, products, wishlist):
 
     catalog = sorted(catalog, key=sort_rule, reverse=True)
     
-    final_wish = {}
-    
-    while tospend(wishlist, catalog) > budget:
+    while budget < tospend(wishlist, catalog):
         if wishlist[catalog[-1][0]] == 1:
             wishlist.pop(catalog[-1][0])
+            catalog.pop()
         else:
             wishlist[catalog[-1][0]] -= 1
+            
+    return tospend(wishlist, catalog)
     
-    print(value)
-#    while sum(catalog[1]) > budject
-#    for product in catalog:
-#        if budget >= product[1]:
-#            budget -= product[1]
-#            if product[0] in final_wish:
-#                final_wish[product[0]] += 1
-#            else:
-#                final_wish[product[0]] = 1
-#        else:
-#            continue
-#    
-#    return final_wish
-
-    
-    
-#    wishlisted = []
-#    
-#    for i in w:
-#        wishlisted.append([i[0], i[1], products[i[0]]])
-#    
-#    sorted
-#    print(wishlisted)
-    
-    
-#    value = 0
-#    for i in wishlisted:
-#        if value + products[i[0]] <= budget:
-#            value += products[i[0]]
-#            continue
-#        else:
-#            i[1] -= 1
-#            if i[1] == 0:
-#                wishlisted.remove([i[0], i[1]])
-   
-#    return wishlisted
-
 
 print(budgeting(1000, {'ps4': 350, 'smartphone': 400, 'jacket': 40,
 'pc': 600, 'glasses': 75}, {'ps4': 1, 'smartphone': 1, 'pc': 1}))
