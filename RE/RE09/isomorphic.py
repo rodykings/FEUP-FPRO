@@ -25,8 +25,3 @@ def isomorphic(astring1, astring2):
         result += ((key, value),)
     
     return "'{}' and '{}' are isomorphic because we can map: {}".format(astring1, astring2, str(list(result)))
-
-    
-print(isomorphic('foo', 'bar'))
-print(isomorphic('paper', 'title'))
-print(isomorphic('ab', 'aa'))

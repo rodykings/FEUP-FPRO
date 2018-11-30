@@ -21,7 +21,3 @@ def roman_to_integer(astring):
             result += value
             
     return result
-
-print(roman_to_integer('LXXXIV'))
-print(roman_to_integer("XLIII"))
-print(roman_to_integer('MMMCMXCIX'))
