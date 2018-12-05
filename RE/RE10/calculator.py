@@ -2,24 +2,25 @@
 def calculator(expr):
     
     result = 0
-    cal = ()
+    atuple = ()
+    
+    if type(expr) is not tuple:
+        return expr
     
     for i in expr:
         if type(i) is tuple:
-            cal += (calculator(i),)
+            atuple += (calculator(i),)
         else:
-            cal += (i,)
-            if len(cal) == 3:
+            atuple += (i,)
+            if len(atuple) == 3:
                 #add
-                if i == "+":
-                    result += (expr[0] + expr[2])
+                if atuple[1] == "+":
+                    result += (atuple[0] + atuple[2])
                 #sub
-                elif i == "-":
-                    result += (expr[0] - expr[2])
+                elif atuple[1] == "-":
+                    result += (atuple[0] - atuple[2])
                 #mult    
-                elif i == "*":
-                    result +=  (expr[0] * expr[2])
+                elif atuple[1] == "*":
+                    result +=  (atuple[0] * atuple[2])
         
     return result
-            
-print(calculator(((1, '+', 2), '*', 3)))
