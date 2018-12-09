@@ -1,30 +1,31 @@
-def recursion(matrix, word, alist):
-       
-    for il,line in enumerate (matrix):
-            for ic,char in enumerate (line):
-                    if char == word[0] and len(word)>1 :
-                            hey =[matrix[il+i][ic+i]  for i in range(-1, 2, 1)]
-                            if n == word[1]:
-                                alist.append([il, ic])
-                        
-    return alist
-
 def soup(matrix, word):
-    
-    collum_dict = {1:"A", 2:"B", 3:"C", 4:"D", 5:"E"}
-    
-    alist = []
-    recursion(matrix, word, alist)
-    
-    
-    
-mx = (('X', 'A', 'B', 'N', 'T', 'O'),
-('Y', 'T', 'N', 'R', 'I', 'T'),
-('U', 'P', 'O', 'M', 'D', 'S'),
-('I', 'O', 'H', 'U', 'O', 'O'),
-('R', 'T', 'E', 'L', 'Q', 'X'),
-('I', 'W', 'J', 'K', 'P', 'Z'))
+  #dictionary to introduce the columns
+  dict = {0: "A", 1: "B", 2: "C", 3: "D", 4: "E", 5: "F"}
+  
+  #search recursive function
+  def find(matrix, i, j, word):
+    if matrix[i][j] == word[0]:
+      if len(word) == 1:
+        return True 
+      else:
+        for (a, b) in [(i - 1, j -1), (i + 1, j + 1), (i - 1, j + 1), (i + 1, j - 1), (i, j + 1), (i, j - 1), (i - 1, j), (i + 1, j)]:
+           if matrix[a][b] == word[1] and a >= 0 and b >= 0:
+             return True and find(matrix, a, b, word[1:]) 
+  
+  #catch letter    
+  for line in range(len(matrix)): 
+    for column in range(len(matrix)):  
+      if find(matrix, line, column, word) == True:
+        return dict[line] + str(column + 1)
 
-print(soup(mx, 'PORTO')) #returns the string "C2" (as illustrated above)
-print(soup(mx, 'HOTEL')) #returns the string "D3"
-print(soup(mx, 'RIO')) #returns the string "B4"
+
+mx = (('X', 'A', 'B', 'N', 'T', 'O'),
+      ('Y', 'T', 'N', 'R', 'I', 'T'),
+      ('U', 'P', 'O', 'M', 'D', 'S'),
+      ('I', 'O', 'H', 'U', 'O', 'O'),
+      ('R', 'T', 'E', 'L', 'Q', 'X'),
+      ('I', 'W', 'J', 'K', 'P', 'Z'))
+      
+
+    
+    

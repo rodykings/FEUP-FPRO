@@ -1,4 +1,3 @@
-
 def flatten(alist):
     
     final = []
@@ -9,5 +8,3 @@ def flatten(alist):
         else:
             final.append(i) 
     return final    
-
-print(flatten(['Hello', [2, [[], False]], [True]]))
