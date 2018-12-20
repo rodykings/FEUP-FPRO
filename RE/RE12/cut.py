@@ -4,13 +4,12 @@ def cut(filename, delimiter, field):
             for line in file:
                 line_list = line.split()
                 if type(field) is list:
-                    for i in tuple(field):
-                        finalstr += str(line_list[i-1]) + ","
-                    finalstr = finalstr[:-1]
-                    finalstr += "\\n"
+                    for i in field:
+                        finalstr += str(line_list[i-1]) + delimiter
+                    finalstr += "\n"
+                    finalstr.strip(delimiter)
                 else:
-                    finalstr += str(line_list[field-1]) + '\\n'
-    return finalstr[:-2]        
+                    finalstr += str(line_list[field-1]) + '\n'
+    return finalstr       
     
-print(cut("data.csv", ",", 2))
-print(cut("data.csv", ",", [2,4]))
+print()
