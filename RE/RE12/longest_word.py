@@ -12,6 +12,13 @@ def longest_word(url):
     
     intersect = url_words.intersection(url1_words)
     
-    return sorted(intersect, key=lambda x:len(x) , reverse=True)[0]
+    final_word = ""
+
+    for i in sorted(intersect, key=lambda x:x):
+        if len(i) > len(final_word):
+            final_word = i
+    return final_word
+
+print(longest_word('https://www.w3schools.com/python/python_intro.asp'))
     
 

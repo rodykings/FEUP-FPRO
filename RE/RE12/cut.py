@@ -1,15 +1,18 @@
 def cut(filename, delimiter, field):
-    finalstr = ""
-    with open(filename, "r") as file:
-            for line in file:
-                line_list = line.split()
-                if type(field) is list:
-                    for i in field:
-                        finalstr += str(line_list[i-1]) + delimiter
-                    finalstr += "\n"
-                    finalstr.strip(delimiter)
-                else:
-                    finalstr += str(line_list[field-1]) + '\n'
-    return finalstr       
     
-print()
+    with open(filename, "r") as my_file:
+        wtab_list = [i.strip("\n").split(delimiter) for i in my_file.readlines()]
+    
+    final_str = ""  
+    
+    if type(field) is list:
+        for i in range(0, len(wtab_list)):
+            for n in field:
+                final_str += wtab_list[i][n-1] + delimiter
+            final_str = final_str.strip(delimiter) + "\n"
+        
+    else:
+        for i in wtab_list:
+            final_str += i[field-1] + "\n"
+            
+    return final_str
